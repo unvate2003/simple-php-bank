@@ -1,0 +1,15 @@
+/* Ví dụ: Thêm khoảng cách cho form group */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Định dạng bảng cho dễ nhìn hơn */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* Nút làm mới */
+#refresh-balance-btn {
+    margin-left: 10px;
+    font-size: 0.9em;
+}

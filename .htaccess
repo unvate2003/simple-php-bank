@@ -1,0 +1,17 @@
+Options -Indexes
+<FilesMatch "^(config|db_connect)\.php$">
+    Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^includes/.*$ - [F,L]
+    RewriteRule /^\.(htaccess|htpasswd)$ - [F,L]
+</IfModule>
+
+#HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# php_flag display_errors Off
+# php_flag log_errors On
+# php_value error_log /path/to/your/php_error.log
